@@ -86,24 +86,24 @@ public class ActionWindow : L2PopupWindow
 }
 </blockquote>
 
-We notify Unity where to get the ui layout from
+### We notify Unity where to get the ui layout from
 _windowTemplate = LoadAsset("Data/UI/_Elements/Game/ActionWindow"); 
 
 
-We can find any class or element in the layout to change it
+### We can find any class or element in the layout to change it
 VisualElement dragArea = GetElementByClass("drag-area");
 
-We pass a link to the element into the code and connect the click event
+### We pass a link to the element into the code and connect the click event
 RegisterClickWindowEvent(_windowEle, dragArea);
 
-4. Adding a scene to the hierarchy
+### 4. Adding a scene to the hierarchy
 ![Unity Scene!](https://i.ibb.co/yFQ1dMHT/Game-Scene-1.png) 
 
-5. Adding the ActionWindow class
+### 5. Adding the ActionWindow class
 ![Add Window!](https://i.ibb.co/dJmvkXQb/Game-Scene-2.png) 
 
-6. Open File Assets\Scripts\UI\L2GameUI
-7. Add code 
+### 6. Open File Assets\Scripts\UI\L2GameUI
+### 7. Add code 
 		<blockquote>
 			if (ActionWindow.Instance != null)
 			{
@@ -111,5 +111,5 @@ RegisterClickWindowEvent(_windowEle, dragArea);
 				ActionWindow.Instance.HideWindow();
 			}
 		</blockquote>
-8. We call the code when we need to show the window to the user
+### 8. We call the code when we need to show the window to the user
 <blockquote>ActionWindow.Instance.ShowWindow();</blockquote>
