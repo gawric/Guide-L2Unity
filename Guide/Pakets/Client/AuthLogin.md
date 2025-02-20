@@ -1,6 +1,6 @@
-###I will not describe here how and where this cryptographic algorithm is used
+### I will not describe here how and where this cryptographic algorithm is used
 
-###AuthLogin OPCODE 0x08
+### AuthLogin OPCODE 0x08
 
 <blockquote>
 @Override

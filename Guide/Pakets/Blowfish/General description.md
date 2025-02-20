@@ -1,6 +1,6 @@
-###I will not describe here how and where this cryptographic algorithm is used
+### I will not describe here how and where this cryptographic algorithm is used
 
-###How is it implemented in the server and client
+### How is it implemented in the server and client
 
 Client->SendProtocolVersion (Sends an unencrypted message to the server)
 Server->VersionCheck (It contains the private key for blowfish)

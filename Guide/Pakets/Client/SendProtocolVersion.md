@@ -1,6 +1,6 @@
-###Sent by the client to obtain an encryption key so that it can connect to the gameserver [VersionCheck]
+### Sent by the client to obtain an encryption key so that it can connect to the gameserver [VersionCheck]
 
-###SendProtocolVersion OPCODE 0x00
+### SendProtocolVersion OPCODE 0x00
 
 
 <blockquote>

@@ -1,6 +1,6 @@
-###Received by the client if the AuthLogin request was successful and the server offers to enter the lobby
+### Received by the client if the AuthLogin request was successful and the server offers to enter the lobby
 
-###CharSelectInfo OPCODE 0x13
+### CharSelectInfo OPCODE 0x13
 
 <blockquote>
 final int size = _slots.length;
