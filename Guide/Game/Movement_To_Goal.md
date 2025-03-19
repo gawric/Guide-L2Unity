@@ -76,3 +76,16 @@ private void moveToPawn(WorldObject pawn, int offset)
 		
 		_instant = Instant.now();
 </blockquote>
+
+### Movement speed is contained in the UserInfo package, here is an example of calculation
+
+Packet UserInfo 
+
+<blockquote>
+	writeD(runSpd);
+	writeD(walkSpd);
+	writeF(_player.getStatus().getMovementSpeedMultiplier());
+	writeF(_player.getStatus().getAttackSpeedMultiplier());
+</blockquote>
+End_Run_speed = runSpd * getMovementSpeedMultiplier;
+End_Walk_speed = runSpd * getMovementSpeedMultiplier;
