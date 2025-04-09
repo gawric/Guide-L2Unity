@@ -1,0 +1,18 @@
+### Player Physical Attack
+The attack time is calculated on the server by type of weapon, for example a sword
+
+<blockquote>
+   private float CalculateTimeL2j(float patkSpeed)
+   {
+       return Math.Max(100, 500000 / patkSpeed);
+   }
+</blockquote>
+
+In this formula we take the attack speed from the userinfo package and pass it to this code; it returns the attack time of 1200ms
+
+And then the server divides this value in half because the middle of the animation will hit the npc; the rest of the time we spend on returning the animation home
+Now we have it: 1200/2 = 600 every 600ms the server will update the parameters of the npc and the player Update and at 1200ms the server will send a new packet if the npc is not dead
+
+### Player Client Animation
+1. The most important thing is that the client does not use the same animations and does not use the 1-2-3 combo option one after another. The client uses random and mixes them each time choosing from 3 animations
+2. The client also slows down the animation to about 200ms to create the illusion of the heaviness of the object!!!!
