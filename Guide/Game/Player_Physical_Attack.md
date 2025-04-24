@@ -23,14 +23,6 @@ Synchronizing the attack speed of the unity client with the l2j server. I'm usin
 During the experiments, I came to the conclusion that float speedAtk = (float)0.3585 / timeAtk; Almost identical to the original client!     
 0.07511136f This parameter indicates at what point in time a sharp impact will occur. It fits all swords  
 <blockquote>
-      private void RecreateAnimationCurve(AnimationCurve animationCurve , float timeAtk , float timeAnimation)  
-    {  
-        Keyframe startKey = new Keyframe(0f, 0f);   
-        Keyframe endKey = new Keyframe(timeAtk, timeAnimation);  
         float speedAtk = (float)0.3585 / timeAtk;  
         Keyframe slowDownAttackKey = new Keyframe(0.07511136f, speedAtk);  
-        animationCurve.AddKey(startKey);  
-        animationCurve.AddKey(slowDownAttackKey);  
-        animationCurve.AddKey(endKey);  
-    }  
 </blockquote>  
