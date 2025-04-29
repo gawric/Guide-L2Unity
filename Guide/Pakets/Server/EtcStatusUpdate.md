@@ -1,8 +1,8 @@
-###The package sends additional information about the character[EtcStatusUpdate]  
+###The package sends additional information about the character[EtcStatusUpdate]
 
-###EtcStatusUpdate OPCODE 0xF3    
+###EtcStatusUpdate OPCODE 0xF3
 
-I haven’t fully disassembled the package yet, but I know that when you enter the game, this package sends information about Penalty    
+I haven’t fully disassembled the package yet, but I know that when you enter the game, this package sends information about Penalty
 <blockquote>
 		writeD(_player.getCharges());
 		writeD(_player.getWeightPenalty().ordinal());
