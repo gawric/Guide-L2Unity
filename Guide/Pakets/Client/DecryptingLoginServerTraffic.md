@@ -8,6 +8,7 @@ The server sends packets in this order:
 The server uses blowfish encryption key for encryption, it takes a static one, that is, it is already known to both the client and the server in advance, this key:  
 
 <blockquote>
+
 private static final byte[] STATIC_BLOWFISH_KEY =
 	{
 		(byte) 0x6b,
@@ -27,11 +28,13 @@ private static final byte[] STATIC_BLOWFISH_KEY =
 		(byte) 0x6c,
 		(byte) 0x6c
 	};
+	
 </blockquote>
 
 here is an example of an encryption block on the server  
 
 <blockquote>
+
 private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
 {
 	int xl = bytesTo32bits(src, srcIndex);
@@ -49,9 +52,9 @@ private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
 
 </blockquote>
 
-In order for us to decrypt this information, we need to do the reverse process: first decrypt and then remove xor  
+In order for us to decrypt this information, we need to do the reverse process: first decrypt and then remove xor    
 
-XOR Example
+XOR Example  
 
 <blockquote>
 
@@ -95,9 +98,10 @@ public static bool decXORPass(byte[] packet) {
 
 </blockquote>
 
-BLOWFISH
+BLOWFISH  
 
 <blockquote>
+
 private void decryptBlock(byte[] src, uint srcIndex, byte[] dst, uint dstIndex)
 {
     uint xl = BytesTo32bits(src, srcIndex);
@@ -112,8 +116,9 @@ private void decryptBlock(byte[] src, uint srcIndex, byte[] dst, uint dstIndex)
     Bits32ToBytes(xr, dst, dstIndex);
     Bits32ToBytes(xl, dst, dstIndex + 4);
 }
+
 </blockquote>
 
-and now the package should be readable int,bytes,double
+and now the package should be readable int,bytes,double  
 
 ![Client Class Decode](https://i.ibb.co/4gZL6Pj5/loginXor.png)
