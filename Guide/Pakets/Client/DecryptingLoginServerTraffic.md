@@ -9,8 +9,7 @@ The server uses blowfish encryption key for encryption, it takes a static one, t
 
 <blockquote>
 
-private static final byte[] STATIC_BLOWFISH_KEY =
-	{
+private static final byte[] STATIC_BLOWFISH_KEY ={
 		(byte) 0x6b,
 		(byte) 0x60,
 		(byte) 0xcb,
@@ -35,8 +34,7 @@ here is an example of an encryption block on the server
 
 <blockquote>
 
-private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
-{
+private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex){
 	int xl = bytesTo32bits(src, srcIndex);
 	int xr = bytesTo32bits(src, srcIndex + 4);
     xl ^= P[0];
@@ -102,8 +100,7 @@ BLOWFISH
 
 <blockquote>
 
-private void decryptBlock(byte[] src, uint srcIndex, byte[] dst, uint dstIndex)
-{
+private void decryptBlock(byte[] src, uint srcIndex, byte[] dst, uint dstIndex){
     uint xl = BytesTo32bits(src, srcIndex);
     uint xr = BytesTo32bits(src, srcIndex + 4);
     xl ^= P[ROUNDS + 1];
