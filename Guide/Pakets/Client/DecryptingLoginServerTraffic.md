@@ -7,9 +7,8 @@ The server sends packets in this order:
 
 The server uses blowfish encryption key for encryption, it takes a static one, that is, it is already known to both the client and the server in advance, this key:  
 
-<blockquote>
-
-private static final byte[] STATIC_BLOWFISH_KEY ={
+```
+```private static final byte[] STATIC_BLOWFISH_KEY ={
 		(byte) 0x6b,
 		(byte) 0x60,
 		(byte) 0xcb,
@@ -28,12 +27,13 @@ private static final byte[] STATIC_BLOWFISH_KEY ={
 		(byte) 0x6c
 	};
 	
-</blockquote>
+```
+```
 
 here is an example of an encryption block on the server  
 
-<blockquote>
-
+```
+```
 private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex){
 	int xl = bytesTo32bits(src, srcIndex);
 	int xr = bytesTo32bits(src, srcIndex + 4);
@@ -47,6 +47,8 @@ private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex){
 	bits32ToBytes(xr, dst, dstIndex);
 	bits32ToBytes(xl, dst, dstIndex + 4);
 }
+```
+```
 
 </blockquote>
 
@@ -98,8 +100,8 @@ public static bool decXORPass(byte[] packet) {
 
 BLOWFISH  
 
-<blockquote>
-
+```
+```
 private void decryptBlock(byte[] src, uint srcIndex, byte[] dst, uint dstIndex){
     uint xl = BytesTo32bits(src, srcIndex);
     uint xr = BytesTo32bits(src, srcIndex + 4);
@@ -113,8 +115,8 @@ private void decryptBlock(byte[] src, uint srcIndex, byte[] dst, uint dstIndex){
     Bits32ToBytes(xr, dst, dstIndex);
     Bits32ToBytes(xl, dst, dstIndex + 4);
 }
-
-</blockquote>
+```
+```
 
 and now the package should be readable int,bytes,double  
 
