@@ -3,7 +3,10 @@
 ### BuyList OPCODE 0x11
 
 ```
-```		writeC(0x11);
+@Override
+	protected final void writeImpl()
+	{
+		writeC(0x11);
 		writeD(_money);
 		writeD(_listId);
 		writeH(_list.size());
@@ -29,8 +32,8 @@
 					writeD((int) (product.getPrice() * (1 + _taxRate)));
 			}
 		}
+	}
+```
 
-```
-```
 
 
