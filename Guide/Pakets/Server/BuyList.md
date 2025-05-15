@@ -1,4 +1,4 @@
-### The server sends this list if it receives a bypass from the client for an attempt to open a buy/sell window [BuyList]
+### The server sends this list if it receives a bypass from the client for an attempt to open a buy window [BuyList]
 
 ### BuyList OPCODE 0x11
 
