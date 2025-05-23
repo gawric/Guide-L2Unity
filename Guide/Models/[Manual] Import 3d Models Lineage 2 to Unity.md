@@ -1,6 +1,6 @@
 ### Description of how to import a 3d model into Unity  
 
-![Import Npc](https://i.ibb.co/R4bxCQGt/pakets-1.png)  
+![Import Npc](https://i.postimg.cc/FzY98kZV/1.png)  
 
 My Unity client does not have Fishing Guild Member Klufe NPC, now we want to add it to the client:  
 
