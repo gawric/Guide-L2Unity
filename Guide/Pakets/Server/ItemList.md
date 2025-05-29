@@ -1,4 +1,4 @@
-### The server sends this packet in different situations. But it is believed that the package is not simple and is sent when there are no active actions
+### The server sends this packet in different situations. But it is believed that the package is not simple and is sent when there are no active actions [ItemList]
 
 ### ItemList OPCODE 0x1b
 
