@@ -72,5 +72,5 @@ override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo
 }
 ```
 
-UI Inventory Удаление   
+ 
 <img src="https://i.postimg.cc/Dz0xF8XF/sync-atk.png" alt="Preview0" style="max-width: 40%; height: auto;">     
