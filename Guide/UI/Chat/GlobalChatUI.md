@@ -23,20 +23,22 @@ The logic is simple. The class takes UI elements from the folder and, with each 
  
 
 ### Here is a good example:
-
-VisualElement tabHeaderContainer = _chatTabView.Q<VisualElement>("tab-header-container"); ,
+```csharp
+VisualElement tabHeaderContainer = _chatTabView.Q<VisualElement>("tab-header-container");
+ ```
 
 take the container element for tabs and insert into it as many tabs as we want
 
  
-
+```csharp
 _tabs <- We set the quantity in the Unity editor and set the tab names there too
-
+ ```
+ ```csharp
 VisualElement tabElement = _tabTemplate.CloneTree()[0]; <- We take the ui element from the folder, make a copy of it and insert it into 
 
 tabContainer.Add(tabElement);
 
- 
+  ```
 
 We insert a new tab. You can make 2-3 or even 10 copies of these, as long as they fit. And the tabs themselves are where the listeners are, listening to the mouse click.
 
@@ -62,8 +64,11 @@ We insert a new tab. You can make 2-3 or even 10 copies of these, as long as the
 ```
  
 
-The base element is called VisualElement. Other elements inherit from it, for example:    TextField->VisualElement   
-Label->VisualElement       
+The base element is called VisualElement. Other elements inherit from it, for example:  
+ ```csharp  
+TextField->VisualElement   
+Label->VisualElement    
+```   
 So, we can search by element name and return a VisualElement without even knowing it's a    textfield or anything else. We can also search by element class. Element styles can be described    as CSS, but here they're called uss. The L2StyleSheet.uss file    
 
  
