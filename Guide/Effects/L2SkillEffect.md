@@ -27,3 +27,5 @@ Based on these data, the particle will behave as a sharp pulsation or a "micro-b
 
 4. To slow down the particles and keep them within the same radius, decrease **StartVelocityRangeX** and increase **Duration**. This will produce the same radius but slower and smoother movement.
 
+
+####  Thanks to https://github.com/shnok for creating the base L2SkillEffect shader
