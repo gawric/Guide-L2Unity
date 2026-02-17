@@ -5,7 +5,7 @@ I will be conducting all tests in Blender v3.7
 Let's get started.
 
 
-So, let's start with a mashup model for our spin effect. I found it online as a propeller.
+So, let's start with a mashup model for our spin effect. I found it online as a propeller.   
 ![img1](https://i.ibb.co/MxsfJ4x5/img1.png)    
 Judging by its blades, the mash spins counterclockwise.
 
